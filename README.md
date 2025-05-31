@@ -66,7 +66,7 @@ We welcome contributions! Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) g
 Join the conversation and get help:
 
 * Discussions: [GitHub Discussions](https://github.com/MY-Checkmate/AI-Child/discussions)
-* Patreon: [Support us](https://www.patreon.com/c/StingyGuyUS/)
+* Patreon: [Support us](https://www.patreon.com/c/onelastai/)
 * Telegram: [@stingyguy](https://t.me/onelastai)
 * Contact: [info@stingyguy.us](mailto:info@onelastai.com)
 * Website: [onelastai.com](https://www.onelastai.com/)

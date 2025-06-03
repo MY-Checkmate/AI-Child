@@ -80,9 +80,32 @@ def recall_last_experience():
     except (FileNotFoundError, json.JSONDecodeError):
         return "Memory log empty."
 
+def analyze_experience_patterns():
+    """Detects patterns in AI experiences to optimize decision-making."""
+    decrypt_file()  # Ensure memory is accessible
+
+    try:
+        with open(SRC, "r") as file:
+            logs = json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("[⚠] No experiences recorded yet.")
+        return "[⚠] No experiences recorded yet."
+
+    pattern_count = {}
+    for entry in logs:
+        action = entry["action"]
+        pattern_count[action] = pattern_count.get(action, 0) + 1
+
+    # Identify most frequent past experiences
+    common_experience = max(pattern_count, key=pattern_count.get, default="No data")
+    print(f"[🔍] Most common AI experience: {common_experience} ({pattern_count.get(common_experience, 0)} times)")
+    return common_experience
+
 if __name__ == "__main__":
     print("🔐 AI Memory Vault")
-    action = input("Type 'log' to save, 'lock' to encrypt, 'unlock' to decrypt, or 'recall' to retrieve last experience: ").strip().lower()
+    action = input(
+        "Type 'log' to save, 'lock' to encrypt, 'unlock' to decrypt, 'recall' to retrieve last experience, or 'learn' to analyze patterns: "
+    ).strip().lower()
 
     if action == "log":
         action_details = input("Describe AI action: ")
@@ -94,5 +117,7 @@ if __name__ == "__main__":
         decrypt_file()
     elif action == "recall":
         recall_last_experience()
+    elif action == "learn":
+        analyze_experience_patterns()
     else:
         print("[✖] Invalid command.")

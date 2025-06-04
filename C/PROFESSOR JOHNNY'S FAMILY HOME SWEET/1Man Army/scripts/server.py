@@ -58,5 +58,8 @@ def get_suggestion():
         return Response(f"Use '{top_tool}' — it was run {count} times. Tactical trend recommends it.", mimetype="text/plain")
     return Response("No pattern detected yet.", mimetype="text/plain")
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    debug_mode = os.getenv("APP_ENV", "production") == "development"
+    app.run(debug=debug_mode, port=5000)

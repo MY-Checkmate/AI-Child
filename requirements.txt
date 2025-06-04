@@ -27,7 +27,7 @@ eventlet==0.39.1
 fastapi==0.115.9
 filelock==3.18.0
 flask-socketio==5.5.1
-flask==3.1.0
+flask==3.1.1
 flatbuffers==25.2.10
 fpdf==1.7.2
 fsspec==2025.3.2
@@ -104,7 +104,7 @@ requests==2.32.3
 rich==14.0.0
 rpds-py==0.24.0
 rsa==4.9
-setuptools==70.0.0
+setuptools==78.1.1
 shellingham==1.5.4
 simple-websocket==1.1.0
 six==1.17.0

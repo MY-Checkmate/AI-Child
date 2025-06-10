@@ -100,7 +100,7 @@ pywin32==310
 pyyaml==6.0.2
 referencing==0.36.2
 requests-oauthlib==2.0.0
-requests==2.32.3
+requests==2.32.4
 rich==14.0.0
 rpds-py==0.24.0
 rsa==4.9
